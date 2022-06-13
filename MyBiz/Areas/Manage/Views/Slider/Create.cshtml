@@ -1,0 +1,41 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto my-3">
+            <form asp-action="create" enctype="multipart/form-data" method="post">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <input type="text" asp-for="Title" class="form-control">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Desc" class="form-label">Description</label>
+                    <input type="text" asp-for="Desc" class="form-control">
+                    <span class="text-danger" asp-validation-for="Desc"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BtnText" class="form-label">BtnText</label>
+                    <input type="text" asp-for="BtnText" class="form-control">
+                    <span class="text-danger" asp-validation-for="BtnText"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BtnUrl" class="form-label">BtnUrl</label>
+                    <input type="text" asp-for="BtnUrl" class="form-control">
+                    <span class="text-danger" asp-validation-for="BtnUrl"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">Image</label>
+                    <input asp-for="ImageFile" class="form-control">
+                    <span class="text-danger" asp-validation-for="ImageFile"></span>
+                </div>     
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

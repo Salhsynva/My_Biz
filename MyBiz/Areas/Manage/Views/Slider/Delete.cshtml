@@ -1,0 +1,27 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <img src="~/uploads/sliders/@Model.Image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Title</h5>
+                    <p class="card-text">@Model.Desc</p>
+                    <p class="card-text">BtnText: @Model.BtnText</p>
+                    <p class="card-text">BtnURl: @Model.BtnUrl</p>
+
+                    <form asp-action="delete" method="post">
+                        <a asp-action="index" class="btn btn-primary text-light">Go to back</a>
+                        <button type="submit" class="btn btn-danger text-light">Delete it</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
